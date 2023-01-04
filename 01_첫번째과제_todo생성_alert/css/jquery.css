@@ -1,0 +1,79 @@
+/* reset */
+@font-face {
+    font-family: 'PyeongChang-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChang-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: 'PyeongChang-Bold';
+}
+body {
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    width:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+    justify-content:center;
+    align-items:center;
+    font-size:15px;
+    font-weight:500;
+    color:#333;
+    background-image: linear-gradient(to right, #c6ddff, #cdddff, #d3ddff, #d9deff, #dfdeff);
+
+}
+ul,li {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+button {
+    
+}
+
+/* wrapper */
+div.wrapper {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    text-align:center;
+    background:#fff9e6;
+    width:50%;
+    padding:40px 0 100px;
+}
+div.wrapper header {
+    font-size:50px;
+    font-weight:700;
+}
+div.wrapper div.inputWrapper {
+ display:flex;
+ gap: 10px;
+ 
+}   
+div.wrapper div.inputWrapper input {
+    width:500px;
+    height:50px;
+    margin-top:30px;
+    padding-left:10px;
+}
+div.wrapper div.inputWrapper button#btn {
+    height:57px;
+    width:50px;
+    margin-top:30px;
+}
+li {
+    width: 503px;
+    height: 50px;
+    margin-top: 10px;
+    border: 1px solid #000;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    text-align:left;
+    margin-right: 60px;
+    padding-left:10px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/vanillaJavascript.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>vanillaJavascript <br /> TO DO LIST</header>
+        <div class="inputWrapper">
+            <input type="text" onkeyup="enterkey()" id="addInput" placeholder="할일 추가하기! 갓생!" autofocus>
+            <button id="btn" onclick="addTodo()">확인</button>
+        </div>
+        <ul id="addTodo" class="todoList">
+            <div id="result"></div>
+        </ul>
+    </div>
+
+    <script>
+        const btn = document.getElementById('btn');
+        let addInput = document.getElementById('addInput');
+        let result = document.getElementById('result');
+
+        // 버튼을 누르면 하는 이벤트
+        function addTodo() {
+            if (addInput.value == false) {
+                alert('입력한 값이 없습니다.');
+            } else {
+                let list = document.createElement('li');
+                //Document.createElement() 메서드는 지정한 tagName의 HTML 요소를 만들어 반환한다.
+                list.innerHTML = addInput.value;
+                result.append(list);
+                document.getElementById("addInput").value = '';
+                // clear the input
+            }
+        }
+        // 엔터를 누르면 하는 이벤트
+        function enterkey() {
+            if (window.event.keyCode == 13) {
+                if (addInput.value == false) {
+                    alert('입력한 값이 없습니다.');
+                } else {
+                    let list = document.createElement('li');
+                    //Document.createElement() 메서드는 지정한 tagName의 HTML 요소를 만들어 반환한다.
+                    list.innerHTML = addInput.value;
+                    result.append(list); //appendChild()의 차이점을 알아둘것
+                    document.getElementById("addInput").value = '';
+                    // clear the input
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

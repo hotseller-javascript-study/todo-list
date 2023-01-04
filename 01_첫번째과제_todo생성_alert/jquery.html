@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/jquery.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>JQUERY<br /> TO DO LIST</header>
+        <div class="inputWrapper">
+            <input type="text" id="addInput" placeholder="할일 추가하기! 갓생!" autofocus>
+            <button id="btn">확인</button>
+        </div>
+        <ul id="addTodo" class="todoList">
+            <div id="result"></div>
+        </ul>
+    </div>
+
+    <script>
+        // 버튼을 누르면 하는 이벤트
+        const btn = $('#btn');
+        $(function () {
+            $("#btn").on("click", function () {
+                let addInput = $("input").val();
+                if (addInput == "") {
+                    alert('입력한 값이 없습니다.')
+                } else {
+                    let val = $("input").val();
+                    let addLi = $("<li></li>").text(val);
+                    $("#result").append(addLi);
+                    $("input").val("");	// clear the input
+                }
+            });
+        });
+
+        // 엔터를 누르면 하는 이벤트
+        $("#addInput").keydown(function (key) {
+            if (key.keyCode == 13) {
+                let addInput = $("input").val();
+                if (addInput == "") {
+                    alert('입력한 값이 없습니다.')
+                } else {
+                    let val = $("input").val();
+                    let addLi = $("<li></li>").text(val);
+                    $("#result").append(addLi);
+                    $("input").val("");	// clear the input
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
